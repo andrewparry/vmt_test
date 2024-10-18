@@ -1,0 +1,61 @@
+
+VMT Office Hour Reservation System
+Overview
+This document defines a comprehensive software application tailored for the Venture Mentoring Team, facilitating the coordination of office hours between mentors and mentees. 
+The participants in this system will be mentors, mentees and the system administrators. All participants will have logins, passwords and the ability to upload information including LinkedIn addresses, preferences and pitch decks.
+The application will enable mentors to log into the system and input (offer) their available office hours for future weeks into a calendar shared by all mentors and mentees (the Shared Calendar) and automatically receive an invite for their personal calendar and any subsequent cancellations for their volunteered hours on the Shared Calendar. (It might be preferable to initiate the offered hour from a mentor’s personal calendar onto the Shared Calendar.)
+More than one mentor could offer the same hour (similar to a mentor hour being just one of many rooms in a hotel) and mentees would have the choice of which mentor to book for a specific hour.
+Additionally, the system will allow multiple mentors to view, offer, and participate in the same office hour with one other mentor, fostering a collaborative mentoring environment.
+Mentees should be able to review the shared calendar, see mentor information (skills, interests, preferences and LinkedIn accounts) reserve a specific hour with one of the mentors offering an hour and trigger the system to send calendar invites to both parties for the virtual (Zoom) meeting with all related zoom information.  Once an hour is reserved by a mentee that mentor is no longer available for other mentees for that hour. 
+Zoom information will be obtained from a table of licensed zoom rooms managed by the system administrator.
+The system would manage the mentee reservation process so that once all zoom licenses were used for a specific hour no additional mentor availability would be offered for that hour. (Please note that mentors could collectively offer more slots for a specific hour than there were zoom licenses available, but once all the zoom licenses were used the un-booked mentor slots would be cancelled and mentors with unused slots would be offered the opportunity to co-mentor with mentors with reserved slots in that hour).
+Every Friday the application will send cancellation notices to mentors for un-booked hours (hours not reserved by mentees) for the upcoming week but also notify them of any mentors with a booked reservation for the same hour as their un-booked hour (along with the related mentee and zoom information) so that they may attend the other mentor’s booked hour and co-mentor. 
+If a mentor or mentee cancels a previously reserved hour the system will automatically send notifications to the other party and update zoom licensed meeting availability.
+The system will integrate a JotForm survey feedback mechanism, automatically sending out a survey post-meeting to gather Net Promoter Scores from both mentors and mentees.
+Phase 2
+The VMT offers office hours to a number of partner organizations. Each partner organization may have different types of founders (tech, consumer products, veterans, female, or specific university students or alumni founders). Mentors may decide to contribute a specific office hour to one, two or more specific partner organizations. As a result, the system architecture should consider multiple Shared Calendars.
+As an example, when a mentor offers a specific hour (i.e. 9 AM on March 11th) to more than one partner organization the system will manage that mentor’s hour so that when it is reserved by a founder in one partner’s Shared Calendar the hour is deleted for that mentor in all other Shared Calendars where that mentor has also contributed that hour.
+System Specification
+Overview
+The application is designed to streamline the coordination between mentors, mentees, and system administrators in a mentoring environment. It will provide a robust platform for scheduling, information sharing, and feedback collection.
+Participants
+1.	Mentors
+2.	Mentees
+3.	System Administrators
+Functional Requirements
+1. User Accounts and Profiles
+•	Account Creation: Secure login and password setup for mentors, mentees, and administrators.
+•	Profile Information: Users can upload personal information including LinkedIn addresses, preferences, and pitch decks.
+2. Shared Calendar for Scheduling
+•	Mentor Availability: Mentors can input their available office hours into the Shared Calendar for future weeks.
+•	Automatic Invitations: When mentors input their availability, the system automatically sends an invite to their personal calendar.
+•	Cancellation Handling: Automatic updates and notifications for any cancellations or changes in volunteered hours.
+3. Mentor Booking System
+•	Multiple Mentors per Slot: More than one mentor can offer the same available hour, functioning similarly to multiple rooms in a hotel.
+•	Mentee Booking: Mentees can review mentor information, choose a specific hour with a chosen mentor, and reserve it. A calendar invite for the Zoom meeting, along with all relevant Zoom information, is then sent to both parties.
+4. Zoom Integration and Management
+•	Zoom Room Management: Zoom meeting information is managed through a table of licensed Zoom rooms, handled by the system administrator.
+•	License Availability: The system ensures that once all Zoom licenses are utilized for a specific hour, no additional mentor slots are offered for that hour.
+•	Unused Slot Handling: If all Zoom licenses are used, un-booked mentor slots are canceled. Mentors with unused slots are offered the opportunity to co-mentor in booked slots.
+5. Reservation and Cancellation Handling
+•	Automatic Notifications: The system sends cancellation notices to mentors for un-booked hours for the upcoming week. It also notifies them of any mentors with a booked reservation during the same hour, providing an opportunity for co-mentoring.
+•	Cancellation Process: In case of cancellation by a mentor or mentee, the system automatically sends notifications to the other party and updates the availability of Zoom licensed meetings.
+6. Feedback Collection
+•	Post-Meeting Surveys: Integration with JotForm for survey feedback. After each meeting, the system automatically sends out a survey to gather Net Promoter Scores from both mentors and mentees.
+Non-Functional Requirements
+•	Security: Robust authentication and data protection measures to ensure user information is secure.
+•	Scalability: The system should efficiently handle an increasing number of users and data without performance loss.
+•	Reliability: High availability of the system with minimal downtime.
+•	User-Friendly Interface: Intuitive and easy-to-use UI/UX for all categories of users.
+Integration Points
+•	Calendar Integration: Sync with external calendar services for real-time updates and notifications.
+•	Zoom API: Integration for managing and utilizing Zoom licenses and rooms.
+•	JotForm API: Integration for sending and managing feedback surveys.
+Reporting and Analytics
+•	Usage Statistics: Track and report usage patterns, popular time slots, and mentor-mentee engagement metrics.
+•	Feedback Analysis: Collect and analyze feedback for continuous improvement of the mentoring program.
+Compliance and Data Privacy
+•	Data Protection: Ensure compliance with relevant data protection regulations (e.g., GDPR, HIPAA).
+•	Confidentiality: Maintain the confidentiality of mentee and mentor information, sharing only necessary data between parties involved.
+This comprehensive software application aims to create a seamless and efficient environment for mentorship coordination, fostering a collaborative and productive community for mentors, mentees, and administrators.
+
